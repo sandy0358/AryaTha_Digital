@@ -1,0 +1,65 @@
+/**
+ * AryaTha Digital — Contact Form → Enquiry Tracker logger
+ * ---------------------------------------------------------
+ * This version matches the columns of your existing
+ * "AryaTha_Digital_Enquiry_Tracker" spreadsheet:
+ *   Enquiry ID | Date | Customer Name | Phone / WhatsApp | Email |
+ *   Service Required | Budget / Timeline | Requirement / Message |
+ *   Status | Follow-up Date | Notes
+ *
+ * SETUP:
+ * 1. Open your Enquiry Tracker in Google Sheets. If you only have the
+ *    .xlsx file, upload it to Google Drive first, then right-click it
+ *    and choose "Open with > Google Sheets" to convert it.
+ * 2. In the Sheet, go to Extensions > Apps Script.
+ * 3. Delete any starter code and paste this whole file in its place.
+ * 4. Save (Ctrl/Cmd+S).
+ * 5. Click "Deploy" > "New deployment" > gear icon > "Web app".
+ * 6. Set "Execute as: Me" and "Who has access: Anyone", then Deploy.
+ * 7. Approve the permission prompt (click "Advanced" > "Go to
+ *    [project] (unsafe)" — this is your own private script, so it's safe).
+ * 8. Copy the Web app URL (ends in /exec) and send it back in chat —
+ *    that's the only value needed to finish the website integration.
+ *
+ * Every enquiry submitted on the website will now appear as a new row
+ * in the "Enquiries" sheet, with Status defaulted to "New" so it slots
+ * straight into your existing tracker workflow.
+ */
+
+function doPost(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("Enquiries");
+  if (!sheet) {
+    sheet = ss.insertSheet("Enquiries");
+  }
+
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow([
+      "Enquiry ID", "Date", "Customer Name", "Phone / WhatsApp", "Email",
+      "Service Required", "Budget / Timeline", "Requirement / Message",
+      "Status", "Follow-up Date", "Notes"
+    ]);
+  }
+
+  var params = e.parameter || {};
+  var nextNumber = sheet.getLastRow(); // header counts as row 1, so this gives the next sequential number
+  var enquiryId = "ENQ-" + String(nextNumber).padStart(3, "0");
+
+  sheet.appendRow([
+    enquiryId,
+    new Date(),
+    params.fullName || "",
+    params.phone || "",
+    params.email || "",
+    params.serviceRequired || "",
+    params.budget || "",
+    params.message || "",
+    "New",
+    "",
+    ""
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ result: "success", enquiryId: enquiryId }))
+    .setMimeType(ContentService.MimeType.JSON);
+}

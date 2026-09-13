@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AryaTha Digital — Website Development, Graphic Design, AI & Machine Learning Consulting, IT Technical Support, Hardware & Software Installation, Networking and Digital Services.">
+  <meta name="theme-color" content="#07145f">
+  <title>AryaTha Digital | Web, Design, AI & IT Support</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://aryathadigital.netlify.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AryaTha Digital | Web, Design, AI & IT Support">
+  <meta property="og:description" content="Website Development, Graphic Design, AI & Machine Learning Consulting, IT Technical Support, Hardware & Software Installation and Networking — all from one place.">
+  <meta property="og:image" content="logo-hero.png">
+  <meta property="og:url" content="https://aryathadigital.netlify.app">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AryaTha Digital",
+    "image": "https://aryathadigital.netlify.app/logo-hero.png",
+    "url": "https://aryathadigital.netlify.app",
+    "telephone": "+91 86260 82824",
+    "email": "aryathadigitalwebsite@gmail.com",
+    "priceRange": "₹₹",
+    "sameAs": ["https://www.facebook.com/share/19VpMhkMdP/"],
+    "areaServed": "IN",
+    "serviceType": ["Website Development", "Graphic Design", "AI & Machine Learning Consulting", "IT Technical Support", "Hardware & Software Installation", "Network Installation & Support", "SEO & Digital Presence"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "17:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "23:59" }
+    ]
+  }
+  </script>
+  <style>
+    :root{
+      --navy:#07145f; --navy2:#0b1d78; --blue:#168cff; --cyan:#28d7ff;
+      --gold:#ffd43b; --white:#fff; --text:#172033; --muted:#647084;
+      --bg:#f6f8fc; --card:#fff; --border:#e5eaf3;
+      --shadow:0 14px 40px rgba(7,20,95,.10);
+      --radius:22px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 32px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(7,20,95,.96);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+    .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+    .brand img{width:54px;height:54px;object-fit:contain;border-radius:50%}
+    .brand-name{font-size:1.15rem;line-height:1.1}.brand-tag{font-size:.72rem;opacity:.8;display:block;font-weight:500}
+    .nav-menu{display:flex;align-items:center;gap:24px;color:#fff;font-weight:600;font-size:.94rem}
+    .nav-menu a{opacity:.9;transition:.2s}.nav-menu a:hover{opacity:1;color:var(--gold)}
+    .nav-cta{padding:10px 16px;border-radius:999px;background:var(--gold);color:#111!important;opacity:1!important}
+    .nav-toggle{display:none;border:0;background:transparent;color:#fff;font-size:28px}
+    .hero{background:radial-gradient(circle at 80% 20%,#17359e 0,#0a1b73 38%,#050d46 100%);color:#fff;padding:90px 0 76px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;padding:7px 13px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08);color:var(--gold);font-weight:800;font-size:.82rem}
+    h1{font-size:clamp(2.25rem,5vw,4.35rem);line-height:1.05;margin:18px 0}
+    .hero p{color:#dce4ff;font-size:1.08rem;max-width:690px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;border:1px solid transparent;font-weight:800;cursor:pointer;transition:.25s}
+    .btn-primary{background:var(--gold);color:#121212}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(255,212,59,.25)}
+    .btn-outline{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.05)}.btn-outline:hover{background:#fff;color:var(--navy);transform:translateY(-3px)}
+    .trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+    .trust strong{display:block;color:#fff;font-size:1.15rem}.trust span{color:#aebbe8;font-size:.84rem}
+    .hero-logo{display:flex;justify-content:center}
+    .hero-logo img{width:min(440px,85vw);filter:drop-shadow(0 24px 45px rgba(0,0,0,.35));animation:float 5s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-10px)}}
+    .section{padding:78px 0}.section.alt{background:#fff}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 38px}.section-head h2{font-size:clamp(1.9rem,3vw,2.7rem);margin:0 0 10px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;gap:20px}.cards-3{grid-template-columns:repeat(3,1fr)}
+    .service-card,.price-card,.work-card,.contact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 4px 18px rgba(7,20,95,.05);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+    .service-card{padding:26px;position:relative;overflow:hidden}
+    .service-card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--navy),var(--blue),var(--gold));transform:scaleX(0);transform-origin:left;transition:.3s}
+    .service-card:hover{transform:translateY(-9px);box-shadow:var(--shadow);border-color:#c9d5ef}
+    .service-card:hover:before{transform:scaleX(1)}
+    .service-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#edf5ff;color:var(--navy);font-size:25px;margin-bottom:16px}
+    .service-card h3{margin:0 0 8px;color:var(--navy)}.service-card p{color:var(--muted);margin:0 0 15px}
+    .service-card ul,.price-card ul{padding-left:20px;color:#526077;margin:0}.service-card li{margin:6px 0}
+    .service-link{display:inline-flex;margin-top:18px;color:#0867d8;font-weight:800}
+    .service-link:hover{text-decoration:underline}
+    .work-grid{grid-template-columns:repeat(3,1fr)}.work-card{overflow:hidden}.work-thumb{height:170px;display:grid;place-items:center;color:#fff;font-size:44px;background:linear-gradient(135deg,#07145f,#168cff)}
+    .work-body{padding:22px}.work-body h3{margin:0;color:var(--navy)}.work-body p{color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:0;margin:0;list-style:none}.step{padding:24px;background:#fff;border:1px solid var(--border);border-radius:18px}.step-num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font-weight:900;margin-bottom:14px}
+    .pricing-grid{grid-template-columns:repeat(3,1fr)}.price-card{padding:28px;position:relative}.price-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.price-card.featured{border:2px solid var(--gold)}.price{font-size:2rem;font-weight:900;color:var(--navy);margin:8px 0}.muted{color:var(--muted)}.ribbon{position:absolute;right:16px;top:16px;background:var(--gold);padding:5px 10px;border-radius:999px;font-size:.72rem;font-weight:900}
+    .faq{max-width:850px;margin:auto}.faq details{background:#fff;border:1px solid var(--border);border-radius:14px;padding:17px 20px;margin:10px 0}.faq summary{cursor:pointer;font-weight:800;color:var(--navy)}
+    .contact-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.contact-card{padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-weight:800;color:var(--navy);font-size:.9rem}input,select,textarea{width:100%;margin-top:7px;padding:13px 14px;border:1px solid #d6deeb;border-radius:11px;font:inherit;background:#fff;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,140,255,.10)}textarea{resize:vertical}.form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.wa{background:#20c76a;color:#fff}.wa:hover{background:#18a957;transform:translateY(-2px)}
+    .contact-item{display:flex;gap:13px;padding:16px 0;border-bottom:1px solid var(--border)}.contact-item:last-child{border-bottom:0}.contact-icon{font-size:22px}.contact-item strong{display:block;color:var(--navy)}.contact-item a{color:#0867d8;font-weight:700}
+    footer{background:#050d46;color:#cbd5f7;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:var(--gold)}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c76a;color:#fff;font-size:25px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.22);transition:.25s}.whatsapp-float:hover{transform:scale(1.08)}
+    .notice{background:#eef7ff;border-left:4px solid var(--blue);padding:14px 16px;border-radius:10px;color:#40516e;margin-top:18px}
+    .availability{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:9px 16px;border-radius:999px;background:rgba(255,212,59,.14);border:1px solid rgba(255,212,59,.35);color:var(--gold);font-weight:700;font-size:.86rem}
+    .form-row-full{grid-column:1/-1}
+    .field-error{color:#e0475a;font-size:.8rem;margin-top:5px;display:block;min-height:1em}
+    .form-status{margin-top:16px;padding:13px 16px;border-radius:11px;font-size:.92rem;font-weight:600;display:none}
+    .form-status.show{display:block}
+    .form-status.ok{background:#e8f8ee;color:#188a4c;border:1px solid #b9ecc9}
+    .form-status.warn{background:#fff8e6;color:#8a6d18;border:1px solid #f3e1a6}
+    .form-status.err{background:#fdeceb;color:#c23b3b;border:1px solid #f5c6c2}
+    .btn:disabled{opacity:.65;cursor:not-allowed;transform:none!important}
+    .virtual-line{color:var(--muted);font-size:.86rem;margin-top:4px}
+    @media(max-width:900px){.hero-grid,.contact-wrap{grid-template-columns:1fr}.hero-logo{order:-1}.cards-3,.work-grid,.pricing-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.nav-toggle{display:block}.nav-menu{display:none;position:absolute;top:76px;left:0;right:0;background:#07145f;padding:16px;flex-direction:column;align-items:stretch}.nav-menu.open{display:flex}.nav-menu a{padding:10px}}
+    @media(max-width:620px){.container{width:min(100% - 22px,var(--max))}.hero{padding:58px 0}.section{padding:58px 0}.cards-3,.work-grid,.pricing-grid,.steps,.form-grid{grid-template-columns:1fr}.brand-tag{display:none}.header-inner{min-height:68px}.brand img{width:48px;height:48px}h1{font-size:2.45rem}.hero p{font-size:1rem}.actions .btn{width:100%}.trust{gap:18px}.hero-logo img{width:300px}.contact-card{padding:21px}.whatsapp-float{right:14px;bottom:14px}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="AryaTha Digital home">
+      <img src="logo-header.png" width="54" height="54" alt="AryaTha Digital logo">
+      <span><span class="brand-name">AryaTha Digital</span><span class="brand-tag">Web • Design • AI • IT Support</span></span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" onclick="toggleNav()">☰</button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#services" onclick="closeNav()">Services</a>
+        <a href="#work" onclick="closeNav()">Work</a>
+        <a href="#pricing" onclick="closeNav()">Pricing</a>
+        <a href="#faq" onclick="closeNav()">FAQ</a>
+        <a class="nav-cta" href="#contact" onclick="closeNav()">Get a Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">YOUR VISION • OUR TECHNOLOGY</span>
+      <h1>Professional digital solutions for your business.</h1>
+      <p>Website development, graphic design, AI & Machine Learning consulting, IT technical support, hardware/software installation and networking — all from one place.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/918626082824?text=Hi%20AryaTha%20Digital%2C%20I%20want%20a%20quote%20for%20your%20services." target="_blank" rel="noopener">💬 WhatsApp Now</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
+      </div>
+      <div class="trust">
+        <div><strong>Business Ready</strong><span>Professional solutions</span></div>
+        <div><strong>Mobile First</strong><span>Fully responsive</span></div>
+        <div><strong>Direct Support</strong><span>WhatsApp connection</span></div>
+      </div>
+      <div class="availability">🕐 Mon–Sat: 5:00 PM – 11:00 PM &nbsp;•&nbsp; Sunday: Open All Day &nbsp;•&nbsp; 100% Virtual Service</div>
+    </div>
+    <div class="hero-logo"><img src="logo-hero.png" alt="AryaTha Digital" width="440" height="440"></div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head"><h2>Our Services</h2><p>Choose the service you need and contact AryaTha Digital directly on WhatsApp.</p></div>
+    <div class="grid cards-3">
+      <article class="service-card">
+        <div class="service-icon">🌐</div><h3>Website Development</h3>
+        <p>Modern, fast and responsive websites for businesses, portfolios, landing pages and online services.</p>
+        <ul><li>Business websites</li><li>Landing pages</li><li>WordPress websites</li><li>Forms & WhatsApp integration</li><li>Hosting & domain guidance</li></ul>
+        <a class="service-link" href="javascript:contactService('Website Development')">Request Website →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🎨</div><h3>Graphic Design</h3>
+        <p>Professional visual content to make your business look consistent and memorable.</p>
+        <ul><li>Logo & brand identity</li><li>Social media posts</li><li>Flyers & banners</li><li>Business cards</li><li>YouTube thumbnails</li></ul>
+        <a class="service-link" href="javascript:contactService('Graphic Design')">Request Design →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🤖</div><h3>AI & Machine Learning Consulting</h3>
+        <p>Practical guidance for using AI tools and automation to improve business productivity.</p>
+        <ul><li>AI tool setup</li><li>AI workflow guidance</li><li>Business automation ideas</li><li>AI content workflows</li><li>Technology consulting</li></ul>
+        <a class="service-link" href="javascript:contactService('AI & Machine Learning Consulting')">Discuss AI →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🛠️</div><h3>IT Technical Support</h3>
+        <p>Reliable support for computers, software, troubleshooting and everyday business technology.</p>
+        <ul><li>PC troubleshooting</li><li>Windows/Linux support</li><li>Software problems</li><li>System maintenance</li><li>Technical guidance</li></ul>
+        <a class="service-link" href="javascript:contactService('IT Technical Support')">Get IT Support →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">💻</div><h3>Hardware & Software Installation</h3>
+        <p>Setup and configuration of computers, applications, printers and business devices.</p>
+        <ul><li>Computer setup</li><li>Software installation</li><li>Printer/device setup</li><li>Application configuration</li><li>Maintenance support</li></ul>
+        <a class="service-link" href="javascript:contactService('Hardware & Software Installation')">Request Installation →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🔌</div><h3>Network Installation & Support</h3>
+        <p>Basic business networking setup and troubleshooting for connected devices.</p>
+        <ul><li>LAN setup</li><li>Router configuration</li><li>Wi-Fi setup</li><li>Device connectivity</li><li>Network troubleshooting</li></ul>
+        <a class="service-link" href="javascript:contactService('Network Installation & Support')">Request Networking →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">📈</div><h3>SEO & Digital Presence</h3>
+        <p>Help your business become easier to discover online with a stronger digital presence.</p>
+        <ul><li>Basic SEO setup</li><li>Google-friendly structure</li><li>Business profile guidance</li><li>Social media integration</li><li>Content structure</li></ul>
+        <a class="service-link" href="javascript:contactService('SEO & Digital Presence')">Improve My Presence →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🛒</div><h3>E-commerce & Business Solutions</h3>
+        <p>Build an online selling or enquiry system tailored to your business requirements.</p>
+        <ul><li>Product catalogues</li><li>Online enquiry</li><li>Payment integration planning</li><li>Booking solutions</li><li>Custom features</li></ul>
+        <a class="service-link" href="javascript:contactService('E-commerce & Business Solutions')">Discuss Requirement →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">🔧</div><h3>Website Maintenance</h3>
+        <p>Keep your website updated, secure and working properly after launch.</p>
+        <ul><li>Content updates</li><li>Bug fixes</li><li>Backup guidance</li><li>Performance checks</li><li>Ongoing support</li></ul>
+        <a class="service-link" href="javascript:contactService('Website Maintenance')">Request Maintenance →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="work">
+  <div class="container">
+    <div class="section-head"><h2>What We Can Build</h2><p>Practical digital solutions for local businesses, professionals, schools and growing brands.</p></div>
+    <div class="grid work-grid">
+      <article class="work-card"><div class="work-thumb">🌐</div><div class="work-body"><h3>Business Websites</h3><p>Professional websites with services, enquiry forms, WhatsApp CTA and responsive design.</p></div></article>
+      <article class="work-card"><div class="work-thumb">🎯</div><div class="work-body"><h3>Branding & Graphics</h3><p>Logo, social creatives, flyers, cards and digital marketing graphics.</p></div></article>
+      <article class="work-card"><div class="work-thumb">🖥️</div><div class="work-body"><h3>IT Setup</h3><p>Computer, software, network and device setup with technical support.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head"><h2>Simple 4-Step Process</h2><p>From your requirement to a working solution.</p></div>
+    <ol class="steps">
+      <li class="step"><div class="step-num">1</div><h3>Tell Us</h3><p>Send your requirement on WhatsApp.</p></li>
+      <li class="step"><div class="step-num">2</div><h3>Discuss</h3><p>We understand your budget, features and timeline.</p></li>
+      <li class="step"><div class="step-num">3</div><h3>Build</h3><p>Design, development, setup or service work begins.</p></li>
+      <li class="step"><div class="step-num">4</div><h3>Deliver</h3><p>We test the solution and provide support after delivery.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt" id="pricing">
+  <div class="container">
+    <div class="section-head"><h2>Website Packages</h2><p>Starting packages. Final price depends on your exact requirement.</p></div>
+    <div class="grid pricing-grid">
+      <article class="price-card"><h3>Starter</h3><div class="price">₹7,999+</div><p class="muted">Landing page / basic portfolio</p><ul><li>Responsive design</li><li>Contact section</li><li>Basic SEO</li><li>WhatsApp CTA</li></ul><a class="btn btn-primary" style="margin-top:20px;width:100%" href="javascript:contactService('Starter Website Package')">Choose Starter</a></article>
+      <article class="price-card featured"><span class="ribbon">POPULAR</span><h3>Business</h3><div class="price">₹19,999+</div><p class="muted">Professional business website</p><ul><li>Multiple sections/pages</li><li>WhatsApp integration</li><li>Brand styling</li><li>Enquiry form</li><li>Basic SEO</li></ul><a class="btn btn-primary" style="margin-top:20px;width:100%" href="javascript:contactService('Business Website Package')">Choose Business</a></article>
+      <article class="price-card"><h3>Brand + Web</h3><div class="price">₹29,999+</div><p class="muted">Website + visual identity</p><ul><li>Logo/brand kit</li><li>Social templates</li><li>Website build</li><li>Priority support</li></ul><a class="btn btn-primary" style="margin-top:20px;width:100%" href="javascript:contactService('Brand + Web Package')">Choose Brand + Web</a></article>
+    </div>
+    <div class="notice">Need e-commerce, booking, admin panel, school solution, networking or a custom IT requirement? <strong>Send the requirement on WhatsApp for a custom quote.</strong></div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq">
+      <details><summary>Are websites fully responsive?</summary><p>Yes. The website layout is designed for mobile, tablet and desktop screens.</p></details>
+      <details><summary>Can customers contact AryaTha directly from the website?</summary><p>Yes. WhatsApp buttons are connected to <strong>8626082824</strong>, and the contact form also opens a pre-filled WhatsApp enquiry.</p></details>
+      <details><summary>Can I request a custom service?</summary><p>Yes. Send your requirement, preferred timeline and any reference material through WhatsApp.</p></details>
+      <details><summary>Do you provide IT support and networking?</summary><p>Yes. AryaTha Digital offers hardware/software setup, troubleshooting and basic network installation/support.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="contact">
+  <div class="container">
+    <div class="section-head"><h2>Start Your Project</h2><p>Tell us what you need. Submit your enquiry by email and WhatsApp.</p></div>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <form id="contactForm" novalidate>
+          <input type="hidden" name="_subject" value="New enquiry — AryaTha Digital website">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-grid">
+            <label>Name<input required id="name" name="fullName" placeholder="Your name">
+              <span class="field-error" id="err-name"></span>
+            </label>
+            <label>Phone<input required id="phone" name="phone" inputmode="tel" placeholder="Your phone number">
+              <span class="field-error" id="err-phone"></span>
+            </label>
+          </div>
+          <div class="form-grid" style="margin-top:16px">
+            <label>Email<input required id="email" name="email" type="email" placeholder="you@example.com">
+              <span class="field-error" id="err-email"></span>
+            </label>
+            <label>Service<select id="service" name="serviceRequired">
+              <option>Website Development</option><option>Graphic Design</option><option>AI & Machine Learning Consulting</option>
+              <option>IT Technical Support</option><option>Hardware & Software Installation</option><option>Network Installation & Support</option>
+              <option>SEO & Digital Presence</option><option>E-commerce & Business Solutions</option><option>Website Maintenance</option><option>Custom Requirement</option>
+            </select></label>
+          </div>
+          <label style="display:block;margin-top:16px">Budget / Timeline<input id="budget" name="budget" placeholder="Example: ₹20,000 / 10 days"></label>
+          <label style="display:block;margin-top:16px">Project / Service Requirement<textarea required id="message" name="message" rows="6" placeholder="Tell us what you want..."></textarea>
+            <span class="field-error" id="err-message"></span>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" id="submitBtn">📲 Send Enquiry</button>
+            <a class="btn wa" href="https://wa.me/918626082824?text=Hi%20AryaTha%20Digital%2C%20I%20want%20to%20discuss%20a%20requirement." target="_blank" rel="noopener">WhatsApp Direct</a>
+          </div>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </div>
+      <aside class="contact-card">
+        <h3 style="color:var(--navy)">AryaTha Digital</h3>
+        <p class="muted">Website Development • Graphic Design • AI • IT Technical Support</p>
+        <div class="contact-item"><span class="contact-icon">💬</span><div><strong>WhatsApp</strong><a href="https://wa.me/918626082824" target="_blank" rel="noopener">+91 86260 82824</a></div></div>
+        <div class="contact-item"><span class="contact-icon">✉️</span><div><strong>Email</strong><a href="mailto:aryathadigitalwebsite@gmail.com">aryathadigitalwebsite@gmail.com</a></div></div>
+        <div class="contact-item"><span class="contact-icon">🌐</span><div><strong>Website</strong><a href="https://aryathadigital.netlify.app" target="_blank" rel="noopener">aryathadigital.netlify.app</a></div></div>
+        <div class="contact-item"><span class="contact-icon">📘</span><div><strong>Facebook</strong><a href="https://www.facebook.com/share/19VpMhkMdP/" target="_blank" rel="noopener">AryaTha Digital</a></div></div>
+        <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Location</strong><span>Virtual — Remote Service (No Walk-in Office)</span></div></div>
+        <div class="contact-item"><span class="contact-icon">🕐</span><div><strong>Support Hours</strong><span>Mon–Sat: 5:00 PM – 11:00 PM<br>Sunday: Open All Day</span></div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>AryaTha Digital</strong><br><small>Website Development • Graphic Design • AI • IT Technical Support</small></div>
+    <div class="footer-links"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+    <div>© <span id="year"></span> AryaTha Digital. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/918626082824?text=Hi%20AryaTha%20Digital%2C%20I%20need%20a%20quote%20for%20your%20services." target="_blank" rel="noopener" aria-label="Chat with AryaTha Digital on WhatsApp">WA</a>
+
+<script>
+  /* ============================================
+     AryaTha Digital — EDIT YOUR SETUP HERE
+     ============================================ */
+  const CONFIG = {
+    WHATSAPP_NUMBER: "918626082824",      // digits only, with country code
+    EMAIL: "aryathadigitalwebsite@gmail.com",
+    FORM_ENDPOINT: "https://formspree.io/f/[YOUR FORM ID]",              // replace after creating a form at formspree.io
+    GOOGLE_SHEET_ENDPOINT: "https://script.google.com/macros/s/[YOUR SCRIPT ID]/exec" // paste your Apps Script Web App URL
+  };
+
+  function toggleNav(){
+    const menu=document.getElementById("navMenu");
+    const btn=document.querySelector(".nav-toggle");
+    const open=menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded",open);
+  }
+  function closeNav(){document.getElementById("navMenu").classList.remove("open");document.querySelector(".nav-toggle").setAttribute("aria-expanded","false")}
+
+  function waLink(text){
+    return `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }
+
+  function contactService(service){
+    const text=`Hi AryaTha Digital, I am interested in: ${service}. Please share the details, price and timeline.`;
+    window.open(waLink(text),"_blank");
+  }
+
+  /* ---------- Contact form: validation + email + sheet + WhatsApp ---------- */
+  const form = document.getElementById("contactForm");
+  const statusBox = document.getElementById("formStatus");
+  const submitBtn = document.getElementById("submitBtn");
+
+  function setStatus(kind, message){
+    statusBox.textContent = message;
+    statusBox.className = "form-status show " + kind;
+  }
+  function clearError(id){ const el=document.getElementById("err-"+id); if(el) el.textContent=""; }
+  function showError(id, message){ const el=document.getElementById("err-"+id); if(el) el.textContent=message; }
+
+  form.addEventListener("submit", async function(e){
+    e.preventDefault();
+    statusBox.className = "form-status";
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const budget = document.getElementById("budget").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    let valid = true;
+    ["name","phone","email","message"].forEach(clearError);
+
+    if (name.length < 2){ showError("name","Please enter your name."); valid = false; }
+    if (!/^[0-9+\-\s()]{7,15}$/.test(phone)){ showError("phone","Please enter a valid phone number."); valid = false; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError("email","Please enter a valid email address."); valid = false; }
+    if (message.length < 10){ showError("message","Please add a few details about your requirement."); valid = false; }
+
+    if (!valid) return;
+
+    const sheetConfigured = CONFIG.GOOGLE_SHEET_ENDPOINT && !CONFIG.GOOGLE_SHEET_ENDPOINT.includes("[YOUR SCRIPT ID]");
+    const emailConfigured = CONFIG.FORM_ENDPOINT && !CONFIG.FORM_ENDPOINT.includes("[YOUR FORM ID]");
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+
+    // 1) Log to Google Sheet (best-effort, fire-and-forget — Apps Script
+    //    web apps don't return a readable CORS response from the browser).
+    if (sheetConfigured){
+      fetch(CONFIG.GOOGLE_SHEET_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        body: new FormData(form)
+      }).catch(()=>{});
+    }
+
+    // 2) Send a real email via Formspree, if configured.
+    let emailOk = false;
+    if (emailConfigured){
+      try {
+        const res = await fetch(CONFIG.FORM_ENDPOINT, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        emailOk = res.ok;
+      } catch(err){ emailOk = false; }
+    }
+
+    // 3) Always open WhatsApp with the full enquiry pre-filled — this
+    //    channel works today regardless of the email/sheet setup.
+    const waText = `Hi AryaTha Digital, I am ${name}.\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nBudget/Timeline: ${budget || "Not provided"}\nRequirement: ${message}`;
+    window.open(waLink(waText), "_blank");
+
+    // 4) Status message reflecting what actually happened.
+    if (emailConfigured && emailOk){
+      setStatus("ok", "✅ Enquiry sent by email and opened on WhatsApp. AryaTha Digital will get back to you shortly.");
+      form.reset();
+    } else if (emailConfigured && !emailOk){
+      setStatus("err", "WhatsApp opened with your enquiry. The email send failed — please also confirm on WhatsApp.");
+    } else {
+      setStatus("warn", "WhatsApp opened with your enquiry. Email delivery isn't connected yet — please send the WhatsApp message to reach us.");
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "📲 Send Enquiry";
+  });
+
+  document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
